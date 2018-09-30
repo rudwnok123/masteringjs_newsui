@@ -1,5 +1,13 @@
-const fnNewsListTemplate = ({logoImgUrl, company, thumbnews:{imageUrl}, thumbnews:{text}, newslist}) => {
-    return `<div class="title">
+// import newslist from './data/newslist.js';
+
+const fnNewsListTemplate = ({
+  logoImgUrl,
+  company,
+  thumbnews: { imageUrl },
+  thumbnews: { text },
+  newslist
+}) => {
+  return `<div class="title">
     <div class="logo-wrap">
         <img class="company" src="${logoImgUrl}" alt="${company}">
     </div>
@@ -12,12 +20,10 @@ const fnNewsListTemplate = ({logoImgUrl, company, thumbnews:{imageUrl}, thumbnew
         </div>
         <ul>
          ${newslist.reduce((html, newsTitle) => {
-             return html + '<li>' + newsTitle + '</li>';
+           return html + "<li>" + newsTitle + "</li>";
          }, "")}
         </ul>
-    </div>`
-}
+    </div>`;
+};
 
-
-export {fnNewsListTemplate}
-
+export { fnNewsListTemplate };
